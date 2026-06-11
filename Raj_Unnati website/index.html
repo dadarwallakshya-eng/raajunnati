@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj-UNNATI | Rajasthan Unified Network for New Action</title>
+    <meta name="description" content="Official Raj-UNNATI public transparency and governance communication platform. Enabling timely implementation of projects, schemes, and grievance redressal in Rajasthan.">
+    <!-- Google Fonts: Outfit for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons for premium UI iconography -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top State Banner -->
+    <div class="state-banner">
+        <div class="container banner-flex">
+            <div class="state-links">
+                <a href="#about-research" class="banner-link"><i data-lucide="info" class="icon-xs"></i> Research Project Portal</a>
+                <span class="separator">|</span>
+                <span class="banner-text">Government of Rajasthan Initiative</span>
+            </div>
+            <div class="accessibility-options">
+                <span class="date-badge" id="current-date-badge">June 11, 2026</span>
+                <button class="font-btn" onclick="adjustFontSize(-1)">A-</button>
+                <button class="font-btn active" onclick="adjustFontSize(0)">A</button>
+                <button class="font-btn" onclick="adjustFontSize(1)">A+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-area">
+                <!-- Fallback SVG Government Emblem -->
+                <div class="emblem-container">
+                    <svg viewBox="0 0 100 100" class="gov-emblem" id="gov-emblem-svg">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="#8A1538" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="#E65A28" stroke-width="1.5" stroke-dasharray="3,3"/>
+                        <path d="M50,15 L50,65" stroke="#8A1538" stroke-width="2"/>
+                        <!-- Ashoka Lion Capital basic geometric representation -->
+                        <path d="M42,35 Q50,25 58,35 Q50,45 42,35 Z" fill="#E65A28" opacity="0.8"/>
+                        <rect x="46" y="35" width="8" height="20" fill="#8A1538" rx="2"/>
+                        <line x1="40" y1="55" x2="60" y2="55" stroke="#8A1538" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="6" fill="#D4AF37"/>
+                        <!-- Lotus motif representation at bottom -->
+                        <path d="M35,62 C40,58 45,64 50,62 C55,64 60,58 65,62 C60,68 40,68 35,62 Z" fill="#8A1538"/>
+                        <!-- Devanagari Satyameva Jayate representation text -->
+                        <text x="50" y="78" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#8A1538" text-anchor="middle">सत्यमेव जयते</text>
+                    </svg>
+                    <img src="logo.png" alt="Rajasthan Govt Logo" class="gov-logo-img" id="custom-logo" onerror="this.style.display='none';">
+                </div>
+                <div class="brand-text">
+                    <span class="portal-main-title">RAJ-UNNATI</span>
+                    <span class="portal-sub-title">Rajasthan Unified Network for New Action</span>
+                </div>
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#why-raj-unnati">Challenges</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#how-it-works">Workflow</a></li>
+                    <li><a href="#executive-reviews">Reviews</a></li>
+                    <li><a href="#dashboard" class="nav-highlight">Dashboard</a></li>
+                    <li><a href="#upcoming-reforms">Reforms 2.0</a></li>
+                    <li><a href="#document-library">Documents</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav">
+        <ul>
+            <li><a href="#overview" onclick="toggleMobileMenu()">Overview</a></li>
+            <li><a href="#why-raj-unnati" onclick="toggleMobileMenu()">Challenges</a></li>
+            <li><a href="#architecture" onclick="toggleMobileMenu()">Architecture</a></li>
+            <li><a href="#how-it-works" onclick="toggleMobileMenu()">Workflow</a></li>
+            <li><a href="#executive-reviews" onclick="toggleMobileMenu()">Reviews</a></li>
+            <li><a href="#dashboard" onclick="toggleMobileMenu()">Dashboard</a></li>
+            <li><a href="#upcoming-reforms" onclick="toggleMobileMenu()">Reforms 2.0</a></li>
+            <li><a href="#document-library" onclick="toggleMobileMenu()">Documents</a></li>
+            <li><a href="#about-research" onclick="toggleMobileMenu()">About Research</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="overview" class="hero-section">
+            <div class="hero-overlay-grid"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="gov-badge-mini">
+                        <span class="badge-dot"></span> STATE-LEVEL GOVERNANCE MONITORING FRAMEWORK
+                    </div>
+                    <h1>RAJ-UNNATI</h1>
+                    <p class="hero-tagline">Rajasthan's Governance Acceleration Platform</p>
+                    <p class="hero-description">
+                        A state-level governance monitoring framework inspired by PRAGATI, enabling timely implementation of projects, schemes, and grievance redressal through technology-driven administrative coordination.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#why-raj-unnati" class="btn btn-primary">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></a>
+                        <a href="#executive-reviews" class="btn btn-secondary">View Meeting Outcomes</a>
+                        <a href="#dashboard" class="btn btn-accent">Explore Governance Dashboard <i data-lucide="layout-dashboard" class="icon-sm"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-preview-card">
+                        <div class="card-header-accent">
+                            <span class="card-title-badge">REAL-TIME MONITORING</span>
+                            <span class="live-blink"><span class="blink-dot"></span> LIVE</span>
+                        </div>
+                        <div class="card-inner-graphic">
+                            <!-- SVG network visualization showing Secretariat, Departments and Districts -->
+                            <svg viewBox="0 0 200 120" class="hero-svg-network">
+                                <circle cx="100" cy="25" r="8" fill="#8A1538"/>
+                                <text x="100" y="14" font-size="6" font-weight="700" fill="#8A1538" text-anchor="middle">SECRETARIAT</text>
+                                
+                                <path d="M100,33 L50,60 M100,33 L100,60 M100,33 L150,60" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                
+                                <circle cx="50" cy="65" r="7" fill="#E65A28"/>
+                                <text x="50" y="78" font-size="5" fill="#334155" text-anchor="middle">Departments</text>
+                                
+                                <circle cx="100" cy="65" r="7" fill="#E65A28"/>
+                                <text x="100" y="78" font-size="5" fill="#334155" text-anchor="middle">CMIS Portal</text>
+                                
+                                <circle cx="150" cy="65" r="7" fill="#E65A28"/>
+                                <text x="150" y="78" font-size="5" fill="#334155" text-anchor="middle">Districts</text>
+                                
+                                <path d="M50,72 L100,100 M100,72 L100,100 M150,72 L100,100" stroke="#e2e8f0" stroke-width="1.5"/>
+                                
+                                <circle cx="100" cy="103" r="6" fill="#D4AF37"/>
+                                <text x="100" y="115" font-size="5.5" font-weight="600" fill="#1e293b" text-anchor="middle">Outcome Verification</text>
+                            </svg>
+                        </div>
+                        <div class="card-quick-stats">
+                            <div class="q-stat">
+                                <span class="q-num">₹1.47T</span>
+                                <span class="q-lbl">Outlay Monitored</span>
+                            </div>
+                            <div class="q-stat">
+                                <span class="q-num">33+</span>
+                                <span class="q-lbl">Departments</span>
+                            </div>
+                            <div class="q-stat">
+                                <span class="q-num">94.2%</span>
+                                <span class="q-lbl">Resolution Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Why Raj-UNNATI? -->
+        <section id="why-raj-unnati" class="why-section">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-subtitle">The Imperative for Transition</span>
+                    <h2>Why Raj-UNNATI?</h2>
+                    <p class="section-desc-para">Addressing structural gaps in administration, tracking, and delivery to transform governance from inputs to outcomes.</p>
+                </div>
+                
+                <div class="grid-three-col challenges-grid">
+                    <!-- Challenge 1 -->
+                    <div class="challenge-card">
+                        <div class="challenge-icon-box fill-maroon">
+                            <i data-lucide="shield-alert"></i>
+                        </div>
+                        <h3>Administrative Lacuna</h3>
+                        <p class="challenge-text">Gaps in traditional online monitoring platforms where administrative gridlocks between department silos remain unresolved, delaying public works.</p>
+                        <div class="challenge-footer-stat">
+                            <span class="stat-badge">Departmental Silos</span>
+                        </div>
+                    </div>
+                    <!-- Challenge 2 -->
+                    <div class="challenge-card">
+                        <div class="challenge-icon-box fill-saffron">
+                            <i data-lucide="user-x"></i>
+                        </div>
+                        <h3>Accountability Lacuna</h3>
+                        <p class="challenge-text">Weak enforcement mechanisms for delayed projects and recurring grievances. Decisions lack central administrative tracking, leading to administrative slippage.</p>
+                        <div class="challenge-footer-stat">
+                            <span class="stat-badge">Weak Enforcement</span>
+                        </div>
+                    </div>
+                    <!-- Challenge 3 -->
+                    <div class="challenge-card">
+                        <div class="challenge-icon-box fill-gold">
+                            <i data-lucide="hourglass"></i>
+                        </div>
+                        <h3>Delivery Quality Lacuna</h3>
+                        <p class="challenge-text">Significant service delays where compliance is measured purely on financial expenditure (input) rather than tangible public utility (outcomes).</p>
+                        <div class="challenge-footer-stat">
+                            <span class="stat-badge">Service Delays</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics and Audit Findings -->
+                <div class="audit-statistics-panel">
+                    <div class="audit-intro">
+                        <h3>Empirical Basis of Reforms</h3>
+                        <p>Key findings from legislative audits, public records, and national benchmarks highlighted the critical need for an integrated coordination model like Raj-UNNATI.</p>
+                    </div>
+                    <div class="stats-counters-grid">
+                        <div class="counter-box" data-target="72">
+                            <div class="counter-icon"><i data-lucide="file-check-2"></i></div>
+                            <span class="counter-value" id="cag-counter">0</span><span class="counter-suffix">%</span>
+                            <h4>CAG Audit Findings</h4>
+                            <p>Of audited projects reported infrastructure delays exceeding 12 months before systematic coordination.</p>
+                        </div>
+                        <div class="counter-box" data-target="43">
+                            <div class="counter-icon"><i data-lucide="search"></i></div>
+                            <span class="counter-value" id="rti-counter">0</span><span class="counter-suffix">K+</span>
+                            <h4>RTI Grievances</h4>
+                            <p>Annual RTI applications filed highlighting delivery delays in state welfare programs.</p>
+                        </div>
+                        <div class="counter-box" data-target="12">
+                            <div class="counter-icon"><i data-lucide="award"></i></div>
+                            <span class="counter-suffix">Rank </span><span class="counter-value" id="nesda-counter">0</span>
+                            <h4>NeSDA Rankings</h4>
+                            <p>Rajasthan's position in National e-Governance Service Delivery Assessment (NeSDA) prior to framework upgrades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: What is Raj-UNNATI? -->
+        <section id="architecture" class="what-section">
+            <div class="container">
+                <div class="section-title-block">
+                    <span class="section-subtitle">Governance Infrastructure</span>
+                    <h2>What is Raj-UNNATI?</h2>
+                    <p class="section-desc-para">An administrative structure integrating state leadership, coordination mechanisms, and departmental nodes into an outcome-oriented matrix.</p>
+                </div>
+                
+                <div class="architecture-grid">
+                    <!-- Interactive Architecture Chart -->
+                    <div class="arch-visual-container">
+                        <h3>Interactive Governance Hierarchy</h3>
+                        <p class="small-text-hint">Hover or tap nodes to view operational roles in the coordination loop.</p>
+                        
+                        <div class="arch-flowchart">
+                            <!-- Top Tier: Chief Minister -->
+                            <div class="arch-node active-node" id="node-cm" onclick="showNodeDetails('cm')">
+                                <div class="node-icon"><i data-lucide="crown"></i></div>
+                                <div class="node-label">Chief Minister</div>
+                                <span class="node-badge">Strategic Chair</span>
+                            </div>
+                            
+                            <div class="arch-connector-line"></div>
+                            
+                            <!-- Second Tier: Chief Secretary -->
+                            <div class="arch-node" id="node-cs" onclick="showNodeDetails('cs')">
+                                <div class="node-icon"><i data-lucide="user-cog"></i></div>
+                                <div class="node-label">Chief Secretary</div>
+                                <span class="node-badge">Oversight Exec</span>
+                            </div>
+                            
+                            <div class="arch-connector-line"></div>
+                            
+                            <!-- Third Tier: CMIS Portal -->
+                            <div class="arch-node highlight-node" id="node-cmis" onclick="showNodeDetails('cmis')">
+                                <div class="node-icon"><i data-lucide="monitor-dot"></i></div>
+                                <div class="node-label">CMIS Platform</div>
+                                <span class="node-badge">Digital Core</span>
+                            </div>
+                            
+                            <div class="arch-split-row">
+                                <div class="split-branch left-branch">
+                                    <div class="arch-node-sub" id="node-departments" onclick="showNodeDetails('departments')">
+                                        <div class="node-icon"><i data-lucide="building"></i></div>
+                                        <div class="node-label">Departments</div>
+                                    </div>
+                                </div>
+                                <div class="split-branch right-branch">
+                                    <div class="arch-node-sub" id="node-districts" onclick="showNodeDetails('districts')">
+                                        <div class="node-icon"><i data-lucide="map-pin"></i></div>
+                                        <div class="node-label">District Admin</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="arch-merge-line"></div>
+                            
+                            <!-- Bottom Tier: Outlay Implementation -->
+                            <div class="arch-node target-node" id="node-outlays" onclick="showNodeDetails('outlays')">
+                                <div class="node-icon"><i data-lucide="check-circle-2"></i></div>
+                                <div class="node-label">Projects, Schemes & Grievances</div>
+                                <span class="node-badge">Measurable Outcomes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dynamic Details Pane -->
+                    <div class="arch-details-pane" id="arch-details-card">
+                        <div class="card-tag">NODE PROFILE</div>
+                        <h4 id="arch-detail-title">Chief Minister</h4>
+                        <div class="arch-divider"></div>
+                        <p class="arch-detail-desc" id="arch-detail-text">
+                            Chairs the high-level Raj-UNNATI reviews. Evaluates stuck major infrastructure projects, makes immediate inter-ministerial rulings, and enforces deadlines for department heads and district administrators.
+                        </p>
+                        <ul class="arch-detail-bullets" id="arch-detail-list">
+                            <li><i data-lucide="check" class="icon-sm text-maroon"></i> Strategic Leadership</li>
+                            <li><i data-lucide="check" class="icon-sm text-maroon"></i> Interactive reviews with Secretaries</li>
+                            <li><i data-lucide="check" class="icon-sm text-maroon"></i> Decision making and accountability</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Key Pillars -->
+                <div class="grid-five-col pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-num">01</div>
+                        <h4>Real-Time Monitoring</h4>
+                        <p>Track project timelines, administrative hold-ups, and resolution status on a single centralized system.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-num">02</div>
+                        <h4>Inter-Departmental Coordination</h4>
+                        <p>Breaks agency barriers by putting contradicting departments on the same review table.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-num">03</div>
+                        <h4>Issue Escalation</h4>
+                        <p>Resolves stuck files automatically by rising them to Chief Secretary and Chief Minister levels.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-num">04</div>
+                        <h4>Accountability Tracking</h4>
+                        <p>Logs clear individual accountability and holds administrative personnel responsible for delivery delay.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-num">05</div>
+                        <h4>Outcome-Based Governance</h4>
+                        <p>Refocuses parameters from financial budget usage to direct community and asset delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: How It Works -->
+        <section id="how-it-works" class="how-section">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-subtitle">Operational Process Flow</span>
+                    <h2>How It Works</h2>
+                    <p class="section-desc-para">The step-by-step administrative timeline for resolving complex public grievances and executing major infrastructure outlays.</p>
+                </div>
+
+                <div class="workflow-timeline-wrapper">
+                    <div class="workflow-progress-line" id="workflow-progress"></div>
+                    
+                    <div class="workflow-steps">
+                        <!-- Step 1 -->
+                        <div class="workflow-step active" onclick="activateWorkflowStep(1)">
+                            <div class="step-circle">1</div>
+                            <div class="step-content">
+                                <h4>Issue Identified</h4>
+                                <p>Major infrastructure delay or critical public grievance registered.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="workflow-step" onclick="activateWorkflowStep(2)">
+                            <div class="step-circle">2</div>
+                            <div class="step-content">
+                                <h4>Department Uploads</h4>
+                                <p>Concerned department logs current status, blocks, and justifications.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="workflow-step" onclick="activateWorkflowStep(3)">
+                            <div class="step-circle">3</div>
+                            <div class="step-content">
+                                <h4>CMIS Review</h4>
+                                <p>Core team analyzes the blocks and tags dependencies across ministries.</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="workflow-step" onclick="activateWorkflowStep(4)">
+                            <div class="step-circle">4</div>
+                            <div class="step-content">
+                                <h4>Raj-UNNATI Meeting</h4>
+                                <p>Joint digital review chaired by the Chief Minister and Chief Secretary.</p>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="workflow-step" onclick="activateWorkflowStep(5)">
+                            <div class="step-circle">5</div>
+                            <div class="step-content">
+                                <h4>Decision Issued</h4>
+                                <p>Immediate executive ruling with strict implementation timelines.</p>
+                            </div>
+                        </div>
+                        <!-- Step 6 -->
+                        <div class="workflow-step" onclick="activateWorkflowStep(6)">
+                            <div class="step-circle">6</div>
+                            <div class="step-content">
+                                <h4>Tracking</h4>
+                                <p>Weekly progress tracking via CMIS to monitor enforcement metrics.</p>
+                            </div>
+                        </div>
+                        <!-- Step 7 -->
+                        <div class="workflow-step" onclick="activateWorkflowStep(7)">
+                            <div class="step-circle">7</div>
+                            <div class="step-content">
+                                <h4>Verification</h4>
+                                <p>Ground-level outcomes verified and documented for public reporting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Five Executive Reviews -->
+        <section id="executive-reviews" class="reviews-section">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-subtitle">Real-World Case Evidence</span>
+                    <h2>Five Executive Reviews</h2>
+                    <p class="section-desc-para">Cumulative review outcomes of 2026 showing the scale of administrative interventions, program audits, and outlay approvals.</p>
+                </div>
+
+                <!-- Cumulative Stats Dashboard Header -->
+                <div class="cumulative-outlay-banner">
+                    <div class="cum-stat-block">
+                        <span class="cum-number">₹1.47 Lakh Crore</span>
+                        <span class="cum-label">Total Outlay Reviewed & Resolved</span>
+                    </div>
+                    <div class="vertical-divider-light"></div>
+                    <div class="cum-sub-grid">
+                        <div class="cum-sub-item">
+                            <span class="cum-sub-num">47</span>
+                            <span class="cum-sub-lbl">Projects Reviewed</span>
+                        </div>
+                        <div class="cum-sub-item">
+                            <span class="cum-sub-num">18</span>
+                            <span class="cum-sub-lbl">Schemes Evaluated</span>
+                        </div>
+                        <div class="cum-sub-item">
+                            <span class="cum-sub-num">29</span>
+                            <span class="cum-sub-lbl">Departments Covered</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Tabbed Reviews -->
+                <div class="tabs-review-container">
+                    <div class="reviews-tabs-list">
+                        <button class="review-tab-btn active" onclick="switchReviewTab(1)">
+                            <span class="btn-meet-num">Meeting 1</span>
+                            <span class="btn-meet-date">17 Jan 2026</span>
+                        </button>
+                        <button class="review-tab-btn" onclick="switchReviewTab(2)">
+                            <span class="btn-meet-num">Meeting 2</span>
+                            <span class="btn-meet-date">20 Feb 2026</span>
+                        </button>
+                        <button class="review-tab-btn" onclick="switchReviewTab(3)">
+                            <span class="btn-meet-num">Meeting 3</span>
+                            <span class="btn-meet-date">28 Mar 2026</span>
+                        </button>
+                        <button class="review-tab-btn" onclick="switchReviewTab(4)">
+                            <span class="btn-meet-num">Meeting 4</span>
+                            <span class="btn-meet-date">24 Apr 2026</span>
+                        </button>
+                        <button class="review-tab-btn" onclick="switchReviewTab(5)">
+                            <span class="btn-meet-num">Meeting 5</span>
+                            <span class="btn-meet-date">15 May 2026</span>
+                        </button>
+                    </div>
+
+                    <div class="review-content-card" id="review-content-box">
+                        <!-- Content dynamically loaded via JS -->
+                        <div class="review-card-layout">
+                            <div class="rev-main-info">
+                                <span class="meeting-date-badge">17 January 2026</span>
+                                <h3>First Raj-UNNATI Governance Review</h3>
+                                <p class="rev-intro-text">Chaired by the State Executive to address key bottlenecks in central education and environment programs.</p>
+                                
+                                <h4 class="sub-list-title">Core Initiatives & Focus Projects:</h4>
+                                <ul class="projects-reviewed-list">
+                                    <li>
+                                        <strong>PM SHRI (Pradhan Mantri Schools for Rising India)</strong>
+                                        <p>Resolution of matching fund release delays and structural updates across 402 model schools.</p>
+                                    </li>
+                                    <li>
+                                        <strong>PM Surya Ghar (Muft Bijli Yojana)</strong>
+                                        <p>Standardizing net metering approvals by DISCOMs and setting district solar quotas.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="rev-sidebar-stats">
+                                <div class="rev-outlay-box">
+                                    <span class="rev-outlay-title">ALLOCATED OUTLAY</span>
+                                    <span class="rev-outlay-val">₹1,943 Crore</span>
+                                </div>
+                                <div class="rev-status-list">
+                                    <div class="rev-status-item">
+                                        <span class="status-dot green"></span>
+                                        <span class="status-label">Implementation: <strong>On Track</strong></span>
+                                    </div>
+                                    <div class="rev-status-item">
+                                        <span class="status-dot blue"></span>
+                                        <span class="status-label">Secretariat Oversight: <strong>Active</strong></span>
+                                    </div>
+                                </div>
+                                <div class="rev-quote-box">
+                                    <p class="rev-quote">"All administrative roadblocks in DISCOM net metering must be resolved within 7 working days to support the solar rollout."</p>
+                                    <span class="rev-quote-author">— Chief Minister, Decision Directive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Who is Responsible for What? -->
+        <section id="responsibility" class="responsibility-section">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-subtitle">Accountability Framework</span>
+                    <h2>Who is Responsible for What?</h2>
+                    <p class="section-desc-para">Defining roles across the governance ladder to prevent overlapping duties and secure end-to-end outcome metrics.</p>
+                </div>
+
+                <div class="responsibility-matrix">
+                    <!-- Stakeholder Card 1 -->
+                    <div class="matrix-card border-top-maroon">
+                        <div class="matrix-header">
+                            <span class="stakeholder-icon"><i data-lucide="crown"></i></span>
+                            <div>
+                                <h3>Chief Minister</h3>
+                                <span class="role-subtitle">Strategic Executive Head</span>
+                            </div>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Strategic leadership and governance direction</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Presiding over monthly review conferences</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Ultimate decision making on inter-departmental conflicts</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Direct administrative accountability reviews</li>
+                        </ul>
+                    </div>
+
+                    <!-- Stakeholder Card 2 -->
+                    <div class="matrix-card border-top-saffron">
+                        <div class="matrix-header">
+                            <span class="stakeholder-icon"><i data-lucide="user-cog"></i></span>
+                            <div>
+                                <h3>Chief Secretary</h3>
+                                <span class="role-subtitle">Operational Implementation Head</span>
+                            </div>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Cross-department compliance oversight</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Monthly pre-meeting coordination agendas</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Escalating unresolved bottlenecks to CMIS</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Administrative reform execution monitoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Stakeholder Card 3 -->
+                    <div class="matrix-card border-top-gold">
+                        <div class="matrix-header">
+                            <span class="stakeholder-icon"><i data-lucide="building"></i></span>
+                            <div>
+                                <h3>Department Secretaries</h3>
+                                <span class="role-subtitle">Policy & Sector Execution Nodes</span>
+                            </div>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Project implementation and timeline tracking</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Weekly updates of delays onto the CMIS system</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Direct oversight of department field agencies</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Submitting formal compliance audits post-ruling</li>
+                        </ul>
+                    </div>
+
+                    <!-- Stakeholder Card 4 -->
+                    <div class="matrix-card border-top-slate">
+                        <div class="matrix-header">
+                            <span class="stakeholder-icon"><i data-lucide="map-pin"></i></span>
+                            <div>
+                                <h3>District Collectors</h3>
+                                <span class="role-subtitle">Ground Execution Nodes</span>
+                            </div>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Ground implementation and local approvals</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Resolving land acquisition and forest clearance blocks</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Field verification of structural completion claims</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Local grievance resolution tracking</li>
+                        </ul>
+                    </div>
+
+                    <!-- Stakeholder Card 5 -->
+                    <div class="matrix-card border-top-light">
+                        <div class="matrix-header">
+                            <span class="stakeholder-icon"><i data-lucide="users"></i></span>
+                            <div>
+                                <h3>Citizens</h3>
+                                <span class="role-subtitle">Public Stakeholders</span>
+                            </div>
+                        </div>
+                        <ul class="responsibility-list">
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Registering project performance issues</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Participating in digital outcome verification</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Independent feedback on project quality</li>
+                            <li><i data-lucide="arrow-right-circle" class="icon-sm"></i> Validating grievance resolution on ground</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Live Governance Dashboard (Prototype) -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="section-title-block">
+                    <span class="section-subtitle">Real-Time Indicators</span>
+                    <h2>Live Governance Dashboard <span class="badge-prototype">PROTOTYPE</span></h2>
+                    <p class="section-desc-para">Aggregated data representing statewide project status, pending and resolved complaints, and regional compliance scores.</p>
+                </div>
+
+                <!-- Dashboard KPI cards -->
+                <div class="grid-five-col dashboard-kpis">
+                    <div class="kpi-card">
+                        <div class="kpi-icon-box text-maroon"><i data-lucide="folder-sync"></i></div>
+                        <span class="kpi-value">142</span>
+                        <span class="kpi-label">Projects Under Review</span>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon-box text-green"><i data-lucide="check-check"></i></div>
+                        <span class="kpi-value">319</span>
+                        <span class="kpi-label">Projects Completed</span>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon-box text-red"><i data-lucide="alert-circle"></i></div>
+                        <span class="kpi-value">1,482</span>
+                        <span class="kpi-label">Active Grievances</span>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon-box text-blue"><i data-lucide="user-check"></i></div>
+                        <span class="kpi-value">12,492</span>
+                        <span class="kpi-label">Resolved Grievances</span>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon-box text-gold"><i data-lucide="building-2"></i></div>
+                        <span class="kpi-value">38</span>
+                        <span class="kpi-label">Departments Monitored</span>
+                    </div>
+                </div>
+
+                <!-- Charts layout -->
+                <div class="dashboard-charts-row">
+                    <!-- Project Distribution -->
+                    <div class="chart-container-box">
+                        <h3>Projects Under Review by Sector</h3>
+                        <div class="canvas-wrapper">
+                            <canvas id="sectorProjectsChart"></canvas>
+                        </div>
+                    </div>
+                    <!-- Grievance Redressal Trends -->
+                    <div class="chart-container-box">
+                        <h3>Grievance Resolution Rate (Monthly)</h3>
+                        <div class="canvas-wrapper">
+                            <canvas id="grievanceTrendChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District Performance and Map -->
+                <div class="district-rankings-panel">
+                    <div class="district-table-wrapper">
+                        <div class="table-header-controls">
+                            <h3>District Performance Rankings</h3>
+                            <div class="table-actions">
+                                <input type="text" id="district-search-input" placeholder="Search District..." onkeyup="filterDistrictTable()">
+                                <button class="btn-table-sort" onclick="sortDistrictTable()">Sort by Score <i data-lucide="arrow-up-down" class="icon-xs"></i></button>
+                            </div>
+                        </div>
+                        <div class="table-responsive-container">
+                            <table class="district-table" id="district-perf-table">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>District</th>
+                                        <th>Projects Completed</th>
+                                        <th>Grievance Resolution</th>
+                                        <th>UNNATI Score</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="district-table-body">
+                                    <!-- Populated via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Simplified Interactive Heat Map -->
+                    <div class="district-map-wrapper">
+                        <h3>Rajasthan Regional Performance Index</h3>
+                        <p class="map-hint-text">Interactive representation of regional scores. Saffron indicates leading governance; maroon indicates high scrutiny zones.</p>
+                        
+                        <div class="svg-map-container">
+                            <!-- SVG map representing Rajasthan regions -->
+                            <svg viewBox="0 0 320 280" class="rajasthan-svg-map">
+                                <!-- Background grid -->
+                                <defs>
+                                    <pattern id="grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                                    </pattern>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+                                
+                                <!-- Simplified Rajasthan Geographic Boundaries -->
+                                <!-- North Zone -->
+                                <polygon points="120,40 180,20 200,60 150,90 120,70" class="map-district-polygon d-zone-north" onclick="highlightDistrictRegion('North', 88.5, 'Saffron (Excellent)')">
+                                    <title>North Zone (Ganganagar, Hanumangarh, Bikaner)</title>
+                                </polygon>
+                                <text x="160" y="55" class="map-label">NORTH</text>
+                                
+                                <!-- West Zone -->
+                                <polygon points="30,120 120,70 150,90 140,160 80,200 20,170" class="map-district-polygon d-zone-west" onclick="highlightDistrictRegion('West', 74.2, 'Amber (Average)')">
+                                    <title>West Zone (Jaisalmer, Barmer, Jodhpur)</title>
+                                </polygon>
+                                <text x="80" y="130" class="map-label">WEST</text>
+                                
+                                <!-- South Zone -->
+                                <polygon points="80,200 140,160 180,180 200,260 140,260 90,240" class="map-district-polygon d-zone-south" onclick="highlightDistrictRegion('South', 62.8, 'Maroon (Critical Review)')">
+                                    <title>South Zone (Udaipur, Sirohi, Dungarpur)</title>
+                                </polygon>
+                                <text x="140" y="215" class="map-label">SOUTH</text>
+                                
+                                <!-- Central Zone -->
+                                <polygon points="150,90 200,60 220,110 200,160 140,160" class="map-district-polygon d-zone-central" onclick="highlightDistrictRegion('Central', 91.4, 'Saffron (Excellent)')">
+                                    <title>Central Zone (Jaipur, Ajmer, Nagaur)</title>
+                                </polygon>
+                                <text x="175" y="125" class="map-label font-bold">CENTRAL (HQ)</text>
+                                
+                                <!-- East Zone -->
+                                <polygon points="200,60 260,70 290,120 240,180 200,160 220,110" class="map-district-polygon d-zone-east" onclick="highlightDistrictRegion('East', 81.1, 'Amber (Average)')">
+                                    <title>East Zone (Bharatpur, Alwar, Kota)</title>
+                                </polygon>
+                                <text x="240" y="115" class="map-label">EAST</text>
+                            </svg>
+                        </div>
+                        <div class="map-legend-card" id="map-region-info">
+                            <span class="region-meta-title">SELECTED REGION</span>
+                            <h4 id="map-region-name">Central Zone</h4>
+                            <div class="region-stat-row">
+                                <div class="r-stat">
+                                    <span class="r-stat-label">Governance Index</span>
+                                    <span class="r-stat-val text-green" id="map-region-score">91.4%</span>
+                                </div>
+                                <div class="r-stat">
+                                    <span class="r-stat-label">Audit Review Status</span>
+                                    <span class="r-stat-val text-saffron" id="map-region-status">Saffron (Excellent)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Upcoming Reforms (RAJ-UNNATI 2.0) -->
+        <section id="upcoming-reforms" class="reforms-section-2">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-subtitle">Strategic Policy Recommendations</span>
+                    <h2>RAJ-UNNATI 2.0</h2>
+                    <p class="section-desc-para">Future governance roadmaps aimed at expanding data connectivity, reinforcing compliance audits, and securing citizen verification mechanisms.</p>
+                </div>
+
+                <div class="reforms-card-grid">
+                    <!-- Recommendation 1 -->
+                    <div class="reform-card">
+                        <div class="reform-number">R1</div>
+                        <h3>SAMANVAY</h3>
+                        <span class="reform-tagline">Cross-Ministry Connectivity within CMIS</span>
+                        <p class="reform-purpose"><strong>Purpose:</strong> Breaks bureaucratic silos by creating automated data links between conflicting line departments in the CMIS system.</p>
+                        <div class="reform-visual-mini">
+                            <svg viewBox="0 0 100 40" class="svg-reform-graphic">
+                                <rect x="5" y="15" width="20" height="12" rx="2" fill="#8A1538"/>
+                                <text x="15" y="23" font-size="5" fill="#fff" text-anchor="middle">Dept A</text>
+                                <rect x="75" y="15" width="20" height="12" rx="2" fill="#8A1538"/>
+                                <text x="85" y="23" font-size="5" fill="#fff" text-anchor="middle">Dept B</text>
+                                <line x1="25" y1="21" x2="75" y2="21" stroke="#E65A28" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                <circle cx="50" cy="21" r="4" fill="#D4AF37"/>
+                                <text x="50" y="36" font-size="4" fill="#64748b" text-anchor="middle">CMIS Samanvay Hub</text>
+                            </svg>
+                        </div>
+                        <p class="reform-outcome"><strong>Expected Outcome:</strong> 35% drop in file clearances and multi-department approvals.</p>
+                    </div>
+
+                    <!-- Recommendation 2 -->
+                    <div class="reform-card">
+                        <div class="reform-number">R2</div>
+                        <h3>PRABANDHAN</h3>
+                        <span class="reform-tagline">Permanent Program Management Authority</span>
+                        <p class="reform-purpose"><strong>Purpose:</strong> Sets up an independent, non-partisan governance authority to preserve program continuity and administrative knowledge during transitions.</p>
+                        <div class="reform-visual-mini">
+                            <svg viewBox="0 0 100 40" class="svg-reform-graphic">
+                                <rect x="20" y="5" width="60" height="12" rx="2" fill="#2C3E50"/>
+                                <text x="50" y="13" font-size="5" fill="#fff" text-anchor="middle">Permanent PMO Office</text>
+                                <line x1="50" y1="17" x2="50" y2="30" stroke="#2C3E50" stroke-width="1.5"/>
+                                <rect x="30" y="28" width="40" height="10" rx="1.5" fill="#E65A28"/>
+                                <text x="50" y="35" font-size="4.5" fill="#fff" text-anchor="middle">Institutional Memory</text>
+                            </svg>
+                        </div>
+                        <p class="reform-outcome"><strong>Expected Outcome:</strong> Seamless continuation of long-term outlays irrespective of leadership changes.</p>
+                    </div>
+
+                    <!-- Recommendation 3 -->
+                    <div class="reform-card">
+                        <div class="reform-number">R3</div>
+                        <h3>JAN-DRISHTI</h3>
+                        <span class="reform-tagline">Citizen Outcome Verification</span>
+                        <p class="reform-purpose"><strong>Purpose:</strong> Integrates automated citizen feedback loops to verify field work quality and check false compliance logging.</p>
+                        <div class="reform-visual-mini">
+                            <svg viewBox="0 0 100 40" class="svg-reform-graphic">
+                                <text x="15" y="10" font-size="5" fill="#475569" text-anchor="middle">Citizen Feed</text>
+                                <circle cx="15" cy="20" r="5" fill="#E65A28"/>
+                                <text x="15" y="22" font-size="6" fill="#fff" text-anchor="middle">C</text>
+                                <line x1="20" y1="20" x2="45" y2="20" stroke="#475569" stroke-width="1.5"/>
+                                <circle cx="50" cy="20" r="5" fill="#D4AF37"/>
+                                <text x="50" y="22" font-size="6" fill="#fff" text-anchor="middle">D</text>
+                                <line x1="55" y1="20" x2="80" y2="20" stroke="#475569" stroke-width="1.5"/>
+                                <circle cx="85" cy="20" r="5" fill="#8A1538"/>
+                                <text x="85" y="22" font-size="6" fill="#fff" text-anchor="middle">G</text>
+                                <text x="50" y="35" font-size="4" fill="#64748b" text-anchor="middle">Citizen → Dashboard → Government</text>
+                            </svg>
+                        </div>
+                        <p class="reform-outcome"><strong>Expected Outcome:</strong> Independent verification of welfare projects, reducing false completion reporting.</p>
+                    </div>
+
+                    <!-- Recommendation 4 -->
+                    <div class="reform-card">
+                        <div class="reform-number">R4</div>
+                        <h3>UNNATI SCORE</h3>
+                        <span class="reform-tagline">District Governance Ranking System</span>
+                        <p class="reform-purpose"><strong>Purpose:</strong> Implements competitive benchmarking metrics across all districts, ranking officers based on delivery targets.</p>
+                        <div class="reform-visual-mini">
+                            <div class="fake-ranking-badge-row">
+                                <span class="badge-rank gold">1st: Jaipur (92.4)</span>
+                                <span class="badge-rank silver">2nd: Alwar (88.1)</span>
+                                <span class="badge-rank bronze">3rd: Kota (86.5)</span>
+                            </div>
+                        </div>
+                        <p class="reform-outcome"><strong>Expected Metrics:</strong> Service delivery, grievance resolution rates, project completion timelines, and citizen satisfaction scores.</p>
+                    </div>
+
+                    <!-- Recommendation 5 -->
+                    <div class="reform-card">
+                        <div class="reform-number">R5</div>
+                        <h3>OPEN DATA PORTAL</h3>
+                        <span class="reform-tagline">Public Transparency Portal</span>
+                        <p class="reform-purpose"><strong>Purpose:</strong> Opens anonymized administrative performance datasets to researchers and the public to promote civic research.</p>
+                        <div class="reform-visual-mini">
+                            <svg viewBox="0 0 100 40" class="svg-reform-graphic">
+                                <rect x="15" y="10" width="70" height="20" rx="2" fill="none" stroke="#2C3E50" stroke-width="1" stroke-dasharray="2,2"/>
+                                <text x="50" y="22" font-size="6.5" font-weight="600" fill="#2C3E50" text-anchor="middle">&lt; Open Data API &gt;</text>
+                            </svg>
+                        </div>
+                        <p class="reform-outcome"><strong>Expected Outcome:</strong> Enhances government research, media accountability, and civic trust index.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Document Library -->
+        <section id="document-library" class="library-section">
+            <div class="container">
+                <div class="section-title-block">
+                    <span class="section-subtitle">Transparency Archive</span>
+                    <h2>Document Library</h2>
+                    <p class="section-desc-para">Search and access official policy guidelines, reviews, and circulars issued under the Raj-UNNATI coordination framework.</p>
+                </div>
+
+                <div class="library-filter-panel">
+                    <div class="search-box">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" id="library-search" placeholder="Search circulars, minutes, or project reports..." onkeyup="searchDocuments()">
+                    </div>
+                    <div class="category-filters">
+                        <button class="filter-chip active" onclick="filterCategory('all')">All Documents</button>
+                        <button class="filter-chip" onclick="filterCategory('minutes')">Meeting Minutes</button>
+                        <button class="filter-chip" onclick="filterCategory('circulars')">Circulars & Rules</button>
+                        <button class="filter-chip" onclick="filterCategory('reports')">Reports</button>
+                    </div>
+                </div>
+
+                <div class="library-table-wrapper">
+                    <table class="library-table" id="docs-table">
+                        <thead>
+                            <tr>
+                                <th>Document Title</th>
+                                <th>Category</th>
+                                <th>Date Issued</th>
+                                <th>Oversight Dept</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="docs-table-body">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: About This Research -->
+        <section id="about-research" class="about-research-section">
+            <div class="container">
+                <div class="research-grid">
+                    <div class="research-text-block">
+                        <span class="card-tag">PUBLIC POLICY ANALYSIS</span>
+                        <h2>About This Research</h2>
+                        <p class="research-p">
+                            This high-fidelity prototype website was developed as part of an academic research project analyzing state-level replications of federal monitoring frameworks in India.
+                        </p>
+                        
+                        <div class="research-metadata-box">
+                            <div class="meta-row">
+                                <span class="meta-lbl">Research Topic:</span>
+                                <span class="meta-val">Raj-UNNATI: A State-Level Replication of the PRAGATI Governance Model</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-lbl">Researcher:</span>
+                                <span class="meta-val">Lakshya Kumawat</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-lbl">Program:</span>
+                                <span class="meta-val">B.S. Management and Public Policy</span>
+                            </div>
+                        </div>
+
+                        <p class="research-p-small">
+                            The analysis details how state governments can model internal digital interfaces to establish accountability pathways, synchronize intersecting administrative agencies, and transition operational targets from budget allocations (inputs) to public assets (outcomes).
+                        </p>
+                    </div>
+                    
+                    <div class="research-focus-areas">
+                        <h3>Core Research Inquiries</h3>
+                        <div class="inquiry-item">
+                            <span class="inquiry-num">A</span>
+                            <div>
+                                <h4>Federal-to-State Scalability</h4>
+                                <p>Evaluating if the centralized PRAGATI system structure can be scaled down to state Secretariats to coordinate districts.</p>
+                            </div>
+                        </div>
+                        <div class="inquiry-item">
+                            <span class="inquiry-num">B</span>
+                            <div>
+                                <h4>Departmental Cohesion</h4>
+                                <p>Tracking if digital monitoring platforms help remove conflicting land and environment issues across departments.</p>
+                            </div>
+                        </div>
+                        <div class="inquiry-item">
+                            <span class="inquiry-num">C</span>
+                            <div>
+                                <h4>Outcome Measurement</h4>
+                                <p>Shifting metrics from financial expenditures to physical execution and community access validation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="gov-footer">
+        <div class="container">
+            <div class="footer-quote-section text-center">
+                <blockquote class="footer-quote">
+                    "The success of Raj-UNNATI will not be measured by the number of dashboards created, but by the number of problems that disappear from them."
+                </blockquote>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-nav-row">
+                <div class="footer-brand">
+                    <h4>RAJ-UNNATI</h4>
+                    <p>Rajasthan Unified Network for New Action</p>
+                    <p class="copyright-notice">© 2026 Government of Rajasthan. Prototype Policy Research Portal.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h5>Governance Links</h5>
+                    <ul>
+                        <li><a href="#overview">Overview Portal</a></li>
+                        <li><a href="#dashboard">Live Dashboard</a></li>
+                        <li><a href="#upcoming-reforms">Policy Reforms</a></li>
+                        <li><a href="#document-library">Circulars & Archive</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h5>Central References</h5>
+                    <ul>
+                        <li><a href="https://pmindia.gov.in" target="_blank" rel="noopener">PM India Portal</a></li>
+                        <li><a href="https://niti.gov.in" target="_blank" rel="noopener">NITI Aayog Portal</a></li>
+                        <li><a href="https://digitalindia.gov.in" target="_blank" rel="noopener">Digital India Mission</a></li>
+                        <li><a href="https://rajasthan.gov.in" target="_blank" rel="noopener">Govt of Rajasthan Website</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h5>Academic Research</h5>
+                    <ul>
+                        <li><a href="#about-research">Project Details</a></li>
+                        <li><a href="#why-raj-unnati">Governance Audits</a></li>
+                        <li><a href="#architecture">Architecture Flow</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p><strong>Disclaimer:</strong> This website is an interactive high-fidelity policy prototype built to demonstrate executive governance reporting, monitoring interfaces, and strategic administrative reforms. The datasets and metrics shown are mock data representing illustrative targets for presentation and academic purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
